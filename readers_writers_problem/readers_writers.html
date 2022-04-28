@@ -72,6 +72,7 @@
     {
         if(writers.length)
         {
+            alert("Reader is in waiting mode as there is a writer in the Database")
             readerRequests.push(t++)
         }
         else
@@ -85,6 +86,7 @@
     {
         if(writers.length || readers.length)
         {
+            alert("Writer is in waiting mode as there is a reader in the Database")
             writerRequests.push(t++)
         }
         else
@@ -112,13 +114,15 @@
             if(!writers.length)
             {   
                 if(!readers.length)
-                {
-                    writerRequests.shift()
-                    writers.push(0)
-                    dbFlex.innerHTML += `<div class="writer">Writer</div>`
+                {   
+                    if(writerRequests.length)
+                    {   writerRequests.shift()
+                        writers.push(0)
+                        dbFlex.innerHTML += `<div class="writer">Writer</div>`
+                    }
                 }
                 else
-                {
+                {   
                     while(readerRequests.length)
                     {
                         readerRequests.shift()
