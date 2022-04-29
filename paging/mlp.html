@@ -90,7 +90,7 @@
 
 <script>
 function mlp(){
-    var va= document.getElementById("virtualaddress").value;
+    var va= parseInt(document.getElementById("virtualaddress").value);
     $("#demo").append("<b>Virtual Adress is:</b>"+"  "+"<b>"+va+"</b>");
     //Virtual Address is:
     console.log(va);
@@ -98,7 +98,7 @@ function mlp(){
     //Virtual Address space is:
     $("#demo").append("<b><br><br>Virtual Adress space is:</b>"+"  "+"<b>"+vas+"</b>");
     console.log(vas);
-    var ps = document.getElementById("page").value;
+    var ps = parseInt(document.getElementById("page").value);
     $("#demo").append("<b><br><br>Page size is:</b>"+"  "+"<b>"+ps+"</b>");
     //Page size is:
     console.log(ps);
@@ -121,6 +121,7 @@ if(flag==0)
 {
   console.log("909");
   alert("invalid inputs exit");
+  return;
 }
 
 
@@ -150,6 +151,7 @@ if(flag==0)
   if(page_size > vas)
   {
 	  alert("Invalid inputs exit");
+    return;
   }	 
 	
 	
@@ -174,6 +176,7 @@ if(flag==0)
 	{
         //Display invalid inputs exit
         alert("Invalid inputs exit");
+        return;
     }    
     while( size > page_size){
    	size = (size / page_size) * pte ;
