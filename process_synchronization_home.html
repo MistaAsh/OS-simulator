@@ -38,7 +38,7 @@
 
     <!-- ======= Top Bar ======= -->
     <section id="topbar" class="d-flex align-items-center">
-
+        
     </section>
 
     <!-- ======= Header ======= -->
@@ -47,13 +47,13 @@
 
             <h1 class="logo">OS Simulator<span>.</span></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="home.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">All Topics</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
                     <li><a class="nav-link scrollto " href="#faq">F.A.Q</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -61,12 +61,15 @@
 
         </div>
     </header><!-- End Header -->
+
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
-            <h1>Welcome to <span>Page Replacement Algorithms</span></h1>
+            <h1>Welcome to <span>OS Simulator</span></h1>
+            <h2><b>All Algorithms in one go</b></h2>
+            <h2><b>Project done under the guidance of Shashidhar Sir</b></h2>
             <div class="d-flex">
-                <a href="#about" class="btn-get-started mt-5 scrollto">Get Started</a>
+                <a href="#about" class="btn-get-started scrollto">Get Started</a>
                 <!-- <a href="https://www.youtube.com/watch?v=6bXaiR2aAxA" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
             </div>
         </div>
@@ -121,127 +124,93 @@
 
             </div>
         </section><!-- End Featured Services Section -->
+
         <!-- ======= About Section ======= -->
         <section id="about" class="about section-bg">
             <div class="container" data-aos="fade-up">
-
                 <div class="section-title">
                     <h2>About topic</h2>
                     <h3>Know <span>About topic</span></h3>
-                    <p>Page Replacement Algorithms</p>
+                    <p>Process Synchronization</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <h3>Process Synchronization</h3>
+                        <ul>
+                            <li>
+                                <i class="bx bx-store-alt"></i>
+                                <div>
+                                    <h5>Process Synchronization</h5>
+                                    <p>In computer science, synchronization refers to one of two distinct but related concepts: synchronization of processes, and synchronization of data. Process synchronization refers to the idea that multiple processes are to join up or handshake at a certain point, in order to reach an agreement or commit to a certain sequence of action. Data synchronization refers to the idea of keeping multiple copies of a dataset in coherence with one another, or to maintain data integrity. Process synchronization primitives are commonly used to implement data synchronization.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                        <img src="fifo.png" width="370" class="img-fluid" alt="">
-                        <p style="margin-left: 150px;">First In First Out</p>
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100" style="margin-top: 200px">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
                         data-aos="fade-up" data-aos-delay="100">
-                        <h3>First In First Out</h3>
-                        <ul>
-                            <div>
-                                This is the simplest page
-                                replacement algorithm. In this algorithm, the
-                                operating system keeps track of all pages in the memory in a queue, and replaces the
-                                page which had come first in a FIFO like manner.
-                            </div>
-                        </ul>
-                        <h4>Advantages</h4>
-                        <p>
-                            1).It is simple and easy to understand and implement. <br>
-                            2).It is efficiently used for small systems. <br>
-                            3).It does not cause more overheads.
-                        </p>
-                        <h4>Disadvantages</h4>
-                        <p>
-                            1).The process effectiveness is low. <br>
-                            2).When we increase the number of frames while using FIFO, we are giving more memory to
-                            processes. So, page fault should decrease, but here the page faults are increasing. This
-                            problem is called as Belady’s Anomaly. <br>
-                            3).Every frame needs to be taken account off. <br>
-                            4).It uses an additional data structure.
-                        </p>
-                        <button
-                            style="width:100px; background-color:rgb(198, 226, 223); height: 40px; border-radius: 5px; color: aliceblue; font-weight: 400 bold;"><a
-                                href="page_replacement.html">Simulation</a></button>
+
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100" style="margin-top: 200px">
-                        <img src="optimal.png" height="800" class="img-fluid" alt="">
-                        <p style="margin-left: 150px;">Optimal</p>
-                    </div>
-                    <div class="col-lg-6 pt-6 pt-lg-4 content d-flex flex-column justify-content-center"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <h3>Optimal</h3>
-                        <ul>
-                            <div>
-                                This algorithm replaces the
-                                page which will not be referred for a long time in future. Although it can not be
-                                practically implementable but it can be used as a benchmark. Other algorithms are
-                                compared to this in terms of optimality.
-                            </div>
-                        </ul>
-                        <h4>Advantages</h4>
-                        <p>1).Complexity is less and easy to implement. <br>
-                            2).Assistance needed is low i.e Data Structure used are easy and light.</p>
-                        <h4>Disadvantages</h4>
-                        <p>
-                            1).Not possible in practice as the operating system cannot know future requests. <br>
-                            2).Error handling is tough.
-                        </p>
-                        <button
-                            style="width:100px; background-color: rgb(198, 226, 223); height: 40px; border-radius: 5px; color: aliceblue; font-weight: 400 bold;"><a
-                                href="page_replacement.html" style="text-decoration: none;">Simulation</a></button>
-                    </div>
+
+
+            </div>
+        </section><!-- End About Section -->
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Topics covered</h2>
+                    <h3>Check our <span>Process Synchronization Topics</span></h3>
+                    <p>These are the topics along with their Simulations</p>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100" style="margin-top: 200px">
-                        <img src="LRU.png" class="img-fluid" alt="">
-                        <p style="margin-left: 150px;">Least Recently Used</p>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
+                        data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4><a href="producer_consumer/producer_consumer_home.html" target="_blank">Producer Consumer Problem</a></h4>
+                            <p style="text-align:left;">The banker's algorithm is a resource allocation and deadlock
+                                avoidance algorithm that tests
+                                for safety by simulating the allocation for predetermined maximum possible amounts
+                                of all
+                                resources, then makes an “s-state” check to test for possible activities, before
+                                deciding
+                                whether allocation should be allowed to continue </p>
+                        </div>
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-6 content d-flex flex-column justify-content-center"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <h3>Least Recently Used</h3>
-                        <ul>
-
-                            <div>
-                                This algorithm
-                                replaces the page which has not been referred for a long time. This algorithm is
-                                just opposite to the optimal page replacement algorithm. In this, we look at the
-                                past instead of staring at the future.
-                            </div>
-
-                        </ul>
-                        <h4>Advantages</h4>
-                        <p>
-                            1).It is open for full analysis. <br>
-                            2).In this, we replace the page which is least recently used, thus free from Belady’s
-                            Anomaly. <br>
-                            3).Easy to choose page which has faulted and hasn’t been used for a long time.
-                        </p>
-                        <h4>Disadvantages</h4>
-                        <p>
-                            1).It requires additional Data Structure to be implemented. <br>
-                            2).Hardware assistance is high. <br>
-                            3).In LRU error detection is difficult as compared to other algorithms. <br>
-                            4).It has limited acceptability. <br>
-                            5).LRU are very costly to operate.
-                        </p>
-                        <button
-                            style="width:100px; background-color: rgb(198, 226, 223); height: 40px; border-radius: 5px; color: aliceblue; font-weight: 400 bold;"><a
-                                href="page_replacement.html" style="text-decoration: none;">Simulation</a></button>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
+                        data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4><a href="readers_writers_problem/readers_writers_home.html" target="_blank">Readers Writers Problem</a></h4>
+                            <p style="text-align:left;">The readers-writers problem relates to an object such as a file that is shared between multiple processes. Some of these processes are readers i.e. they only want to read the data from the object and some of the processes are writers i.e. they want to write into the object.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
+                        data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4><a href="bankers/bankers_home.html" target="_blank">Bankers Algorithm</a></h4>
+                            <p style="text-align:left;">The banker's algorithm is a resource allocation and deadlock
+                                avoidance algorithm that tests
+                                for safety by simulating the allocation for predetermined maximum possible amounts
+                                of all
+                                resources, then makes an “s-state” check to test for possible activities, before
+                                deciding
+                                whether allocation should be allowed to continue</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section><!-- End About Section -->
-
-        <!-- ======= Services Section ======= -->
-        <!-- End Services Section -->
-
+        </div>
+        </section>
         <!-- ======= Testimonials Section ======= -->
-
         <!-- ======= Frequently Asked Questions Section ======= -->
         <section id="faq" class="faq section-bg">
             <div class="container" data-aos="fade-up">
@@ -251,62 +220,32 @@
                     <h3>Frequently Asked <span>Questions</span></h3>
                     <p>We will be updating the rest of the questions soon</p>
                 </div>
-
                 <div class="row justify-content-center">
                     <div class="col-xl-10">
                         <ul class="faq-list">
-
                             <li>
-                                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">What are Memory
-                                    fit Algorithms ?<i class="bi bi-chevron-down icon-show"></i><i
+                                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Why is it important to synchronize processes ?<i class="bi bi-chevron-down icon-show"></i><i
                                         class="bi bi-chevron-up icon-close"></i></div>
                                 <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Memory fit algorithms are algorithms that are used to allocate contiguos memory
-                                        to processes
-                                        when there are certain gaps in the memory and some memory is unoccupied by
-                                        processes and forms holes.
-                                    </p>
+                                    <p>Process synchronization needs to be implemented to prevent data inconsistency among processes, process deadlocks, and prevent race conditions, which are when two or more operations are executed at the same time, not scheduled in the proper sequence and not exited in the critical section correctly.</p>
                                 </div>
                             </li>
-
                             <li>
-                                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Why do we need
-                                    memory fit algorithms ?<i class="bi bi-chevron-down icon-show"></i><i
+                                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">How are processes normally synchronized ?<i
+                                        class="bi bi-chevron-down icon-show"></i><i
                                         class="bi bi-chevron-up icon-close"></i></div>
                                 <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        We need these algorithms to efficiently allocate contiguos memry to processes
-                                        and try to avoid fragmentation to some extent.
-                                    </p>
+                                    <p>Process Synchronization means coordinating the execution of processes such that no two processes access the same shared resources and data. It is required in a multi-process system where multiple processes run together, and more than one process tries to gain access to the same shared resource or data at the same time.</p>
                                 </div>
                             </li>
-
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">What is the
-                                    advantage of next fit over first fit ?<i class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Next fit tries to address this problem by starting the search for the free
-                                        portion of parts not from the start of the memory, but from where it ends last
-                                        time. Next fit is a very fast searching algorithm and is also comparatively
-                                        faster than First Fit and Best Fit Memory Management Algorithms.
-                                    </p>
-                                </div>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
-
             </div>
         </section><!-- End Frequently Asked Questions Section -->
     </main><!-- End #main -->
-
     <!-- ======= Footer ======= -->
     <footer id="footer">
-
         <div class="footer-newsletter">
             <div class="container">
                 <div class="row justify-content-center">
@@ -317,28 +256,26 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-top">
             <div class="container">
-                <div class="col-lg-3 col-md-6 footer-contact">
-                    <h3>NITK CS Students 2024 Batch<span>.</span></h3>
-                    <p>
-                      This project is succesfully completed under the valuable guidance of Shashidhar Sir<br>
-                    </p>
-                  </div>
                 <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>NITK CS Students 2024 Batch<span>.</span></h3>
+                        <p>
+                            This project is succesfully completed under the valuable guidance of Shashidhar Sir<br>
+                        </p>
+                    </div>
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#about">About Topic</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#services">All Topics</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about">About Operating System</a></li>
+                            <li><a href="#services">All Topics</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="container py-4">
             <div class="copyright">
                 &copy; Copyright <strong><span>Team 201CS201-201CS210 CSE NITK </span></strong>. All Rights Reserved

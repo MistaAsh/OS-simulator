@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MFT</title>
+        <title>MVT</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,63 +31,59 @@
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <a href="home.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
     
-                <nav id="navbar" class="navbar">
-                    <ul>
-                        <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
-                        <li><a class="nav-link scrollto" href="index.html#services">All Topics</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav><!-- .navbar -->
-    
             </div>
         </header><!-- End Header -->
         <br>
         <div class="container">
             <div class="jumbotron">
-                <h1 class="display-1">MFT</h1>
-        
+                <h1 class="display-1">MVT</h1>
                 <hr class="my-4">
-            
+                
             </div>
             <br>
 
 	        		<div class="row">
 	        			<div class="form-group" style="margin-left:50px; float:left;">
-	        				<label class="col-form-label" for="inputDefault">Enter Total Memory Size &emsp;&emsp;&emsp;</label>
+	        				<label class="col-form-label" for="inputDefault">Enter Total Memory Size &emsp; &emsp;&emsp;</label>
 	                        <input class="form-control:focus" id="totalMemSize" name="mem_size" placeholder="Total Memory Size" type="text" size="35">
 	                    </div>
-	                    <div class="form-group" style="margin-left:50px; float:left;">
-	        				<label class="col-form-label" for="inputDefault">Enter Number of Blocks &emsp; &emsp;&emsp;</label>
-	                        <input class="form-control:focus" id="numBlocks" name="block_no" placeholder="# Blocks" type="text" size="35">
-	                    </div>					
-					<button type="submit" class="btn btn-secondary" id="submitBtn" style="margin-left: 60px; width: 150px;">Submit
+							<!-- <input type='text' id='totalMemSize'>
+							<input type='text' id='numBlocks'> -->
+							<!-- <button id='submitBtn'>Submit</button> -->
+							
+					</div>
+					<button type="submit" id="submitBtn" class="btn btn-secondary" style="margin-left: 50px">Submit
 					</button>
-					<br>
+					<br><br><br>
 					<div class="row">
-						<div id="blockContainer" class="form-group" style="margin-left:50px; float:left;"></div>
-					 </div>
-					<div class="row">
-						<div id='#requestContainer'><br>
+						<div id='#requestContainer'>
 							<div class="form-group" style="margin-left:50px; float:left;">
-		        				<label class="col-form-label" for="inputDefault">Enter size of New Request &emsp;&emsp;</label>
-		                        <input class="form-control:focus" id="requestSize" name="req_size" placeholder="Request Size" type="text" size="35">
+		        				<label class="col-form-label" for="inputDefault" >Request ID &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp; &nbsp; </label>
+		                        <input class="form-control:focus" id="requestId" name="req_size" placeholder="Request ID" type="text" size="35"><br>
+					<label class="col-form-label" for="inputDefault">Enter size of New Request &emsp; &emsp;</label>
+					<input class="form-control:focus" id="requestSize" name="req_size" placeholder="Request Size" type="text" size="35">
+
 		                    </div>
-					
+							<!-- <input type='text' id='requestSize'></input> -->
+							<!-- <button id='submitRequestBtn'>Make request!</button> -->
+							<!-- <p id='requestMsg'></p> -->
 						</div>
-					</div><br><br>
-					<button type="submit" class="btn btn-secondary" style="margin-left: 60px; width: 150px;" id='submitRequestBtn'>Make request!</button><br>
+					</div>
+					<button type="submit" class="btn btn-secondary" style="margin-left: 50px" id='submitRequestBtn'>Make request!</button> <br><br><br>
 					<div class="row">
-						<div id='#removeContainer'><br><br>
+						<div id='#removeContainer'>
 							<div class="form-group" style="margin-left:50px; float:left;">
-		        				<label class="col-form-label" for="inputDefault">Block to Empty &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+		        				<label class="col-form-label" for="inputDefault">Block to Empty &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
 		                        <input class="form-control:focus" id="removeNum" name="req_size" placeholder="Empty a block" type="text" size="35">
 		                    </div>
-		
+							<!-- <input type='text' id='requestSize'></input> -->
+							<!-- <button id='submitRequestBtn'>Make request!</button> -->
+							<!-- <p id='requestMsg'></p> -->
 						</div>
 </div>
-				<button type="submit" class="btn btn-secondary" style="margin-left: 60px; float:left; width: 150px;" id='removeBtn'>Empty Block</button>
+				<button type="submit" class="btn btn-secondary" style="margin-left: 50px; float:left;" id='removeBtn'>Empty Block</button><br>
 	<p id='requestMsg' style="float:left; margin-left:50px;"></p>
         </div>
     </body>
-    <script src='mft.js'></script>
+    <script src='mvt.js'></script>
 </html>
