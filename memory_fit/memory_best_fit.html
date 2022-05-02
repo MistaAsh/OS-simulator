@@ -58,8 +58,8 @@
         <h3>Enter the values here</h3>
         <input type="number" name="hole_count" id="hole_count" placeholder="Enter number of holes" />
         <div class="hole-inputs"></div>
-        <input type="number" name="mem-req-size" id="mem-req-size" placeholder="Enter memory request size"
-            style="display: none;" />
+        <input type="number" name="mem-req-size" id="mem-req-size" placeholder="Enter memory request size" style="display: none;"/>
+        <div class="progress-bar-container mt-3 mb-3"></div>
         <button type="button" class="btn btn-primary mt-3" id="submit">Submit</button>
     </div>
     <div class="results">
@@ -73,6 +73,7 @@
     const holeSizes = document.querySelector(".hole-inputs")
     const memoryRequestInput = document.querySelector("#mem-req-size")
     const holeSizeList = [];
+    const origHoleSizeList = [];
     let numMemoryRequests = 0
 
     submitBtn.addEventListener("click", () => {
@@ -90,6 +91,15 @@
             for (let i = 1; i <= numHoles; i++) {
                 const holeISize = +document.getElementById(`hole_size_${i}`).value
                 holeSizeList.push(holeISize)
+                origHoleSizeList.push(holeISize)
+            }
+
+            const progressBarContainer = document.querySelector(".progress-bar-container")
+
+            for(let p = 0; p < numHoles; p++)
+            {
+                progressBarContainer.innerHTML += `<label for="hole_${p+1}" id="hole_${p+1}_val">Hole ${p+1} (${holeSizeList[p]} KB / ${holeSizeList[p]}KB)</label>
+                <meter id="hole_${p+1}" value="${holeSizeList[p]}" min="0" max="${holeSizeList[p]}">${holeSizeList[p]} KB out of ${holeSizeList[p]} KB</meter><br>`
             }
 
             memoryRequestInput.style.display = "inline"
@@ -120,6 +130,8 @@
 
             if (allocated) {
                 holeSizeList[bestHoleIndex] -= memoryRequestSize
+                document.getElementById(`hole_${bestHoleIndex+1}`).value = holeSizeList[bestHoleIndex]
+                document.getElementById(`hole_${bestHoleIndex+1}_val`).textContent = `Hole ${bestHoleIndex+1}(${holeSizeList[bestHoleIndex]} KB / ${origHoleSizeList[bestHoleIndex]}KB)`
                 resultContainer.innerHTML += `<p>Process${numMemoryRequests} has been allocated ${memoryRequestSize}KB of memory successfully.</p>`
                 i++
             }
